@@ -1,5 +1,5 @@
 {% set name = "pyodesys" %}
-{% set version = "0.14.2" %}
+{% set version = "0.14.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyodesys-{{ version }}.tar.gz
-  sha256: 2e9c54dc8d223f9d87aebcedd4a872367dd3ef11cd37e223fe5a95598e67524b
+  sha256: 7a5320dbcadc33c2d2b83c48393c03b4bd97f76c9c9fb075d8dbd28faddd19f6
 
 build:
   skip: true  # [py<38]
