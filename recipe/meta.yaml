@@ -24,6 +24,7 @@ requirements:
     - notebook >=5.7.8
     - numpy >=1.16.4
     - python
+    - cython
     - scipy >=1.2.3
     - sym >=0.3.4
     - sympy >=1.5.1
