@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyodesys-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyodesys-{{ version }}.tar.gz
   sha256: 584e3b8e6c5c633d964d8c6c9c865d348497bf71048de69dd601b65b8d6b882e
 
 build:
   skip: true  # [py<38]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
