@@ -1,5 +1,5 @@
 {% set name = "pyodesys" %}
-{% set version = "0.14.4" %}
+{% set version = "0.14.5" %}
 
 
 package:
@@ -8,31 +8,32 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyodesys-{{ version }}.tar.gz
-  sha256: 584e3b8e6c5c633d964d8c6c9c865d348497bf71048de69dd601b65b8d6b882e
+  sha256: 16beceb5ca40c8ebe3271402486f1bbedd6a138c6a21ebad9e66e6e911c8dc6f
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python
-    - setuptools 
+    - setuptools
   run:
+    - appdirs
+    - cython
     - matplotlib-base >=2.2.5
     - notebook >=5.7.8
     - numpy >=1.16.4
-    - python
-    - cython
-    - scipy >=1.2.3
-    - sym >=0.3.4
-    - sympy >=1.5.1
     - pycvodes
     - pygslodeiv2  # [not win]
     - pyodeint
     - pytest
+    - python
+    - scipy >=1.2.3
+    - sym >=0.3.4
+    - sympy >=1.5.1
 
 test:
   imports:
